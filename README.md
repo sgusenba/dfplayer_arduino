@@ -11,3 +11,6 @@ Libraries used:
 - SoftwareSerial.h
 - DFRobotDFPlayerMini.h
 - Bounce2.h
+
+Some hints for wiring:
+https://www.electronics-lab.com/project/mp3-player-using-arduino-dfplayer-mini/
