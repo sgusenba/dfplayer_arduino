@@ -11,4 +11,4 @@ jobs:
     - name: Compile all examples
       uses: ArminJo/arduino-test-compile@v2
       with: 
-        required-libraries: DFRobotDFPlayerMini
+        required-libraries: DFRobotDFPlayerMini,Bounce2
