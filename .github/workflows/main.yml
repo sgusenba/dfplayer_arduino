@@ -1,11 +1,11 @@
-name: Build examples
+name: SimpleBuild
 on: push
 jobs:
   build:
+    name: Test compiling 
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Build all example sketches
-      uses: Legion2/arduino-builder-action@v2.0.0
-      with:
-        board: "arduino:avr:nano"
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Compile all examples
+      uses: ArminJo/arduino-test-compile@v2
