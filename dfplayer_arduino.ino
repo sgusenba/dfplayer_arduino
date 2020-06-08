@@ -6,7 +6,7 @@ SoftwareSerial mySoftwareSerial(10, 11); // RX, TX
 DFRobotDFPlayerMini myDFPlayer;
 void printDetail(uint8_t type, int value);
 
-int current_folder = 2;
+int current_folder = 2;//the folder to start with
 int play=0;
 int firststart = 0;
 int pinOffSet = 2; //adjust to your pin layout
@@ -47,8 +47,9 @@ void loop()
 {
   if (myDFPlayer.available()) {
     printDetail(myDFPlayer.readType(), myDFPlayer.read()); //Print the detail message from DFPlayer to handle different errors and states.
+    checkbt(); //check if player is available
   }
-  checkbt();
+  
 }
 
 void playFolder(int folder) {
